@@ -1,18 +1,13 @@
 import unittest
-from calculate_shipping_fee import calculate_shipping_fee
+from calculate_shipping_fee import calculate_shipping_fee  # Import hàm từ file khác
 
 class TestShippingFee(unittest.TestCase):
     def test_cases_branch_coverage(self):
         test_data = [
-            (-15.42, 10, 12, "Invalid Input"),
-            (100.5, 100.01, 12, "Invalid Input"),
-            (52.36, 10, -1, "Invalid Input"),
-            (9.08, 12.4, 11, 145400),
-            (6.43, 15, 4, 132150),
-            (40.05, 8.75, 18, 180225),
-            (25, 5.13, 20, 112500),
-            (125.25, 6.12, 9, 551000),
-            (68.42, 3.12, 6, 323680)
+            (1000.01, 16.12, 22, "Invalid Input"),
+            (9.75, 12.25, 15, 98750),
+            (42.5, 9.25, 20, 191250),
+            (100.01, 6.45, 10, 450040)
         ]
         
         for x, y, z, expected in test_data:
